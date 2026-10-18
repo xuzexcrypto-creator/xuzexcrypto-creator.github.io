@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#15100C">
+<title>Бульвар — шашлык на углях и летняя веранда, Казань</title>
+<meta name="description" content="Кафе «Бульвар» на Декабристов, 2/1: шашлык, хан-кебаб, долма, веранда у парка.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== ТОКЕНЫ (ui-ux-pro-max: Restaurant — appetizing red + warm gold, тёмная тема) ===== */
+:root{
+  --color-bg:#15100C;        --color-bg-2:#1E1712;     --color-card:#251C16;
+  --color-fg:#F6EBDD;        --color-muted:#C9B6A2;    --color-border:#3A2C22;
+  --color-primary:#DC2626;   --color-primary-hover:#EF4444; --color-on-primary:#FFFFFF;
+  --color-gold:#E0A526;      --color-on-gold:#1A120B;
+  --color-ember:#F97316;
+  --color-ring:#E0A526;
+  --font-head:"Playfair Display SC",Georgia,serif;
+  --font-body:Manrope,system-ui,sans-serif;
+  --space-2:16px;--space-3:24px;--space-4:32px;--space-5:48px;--space-6:80px;
+  --r-sm:12px;--r-md:20px;--r-lg:28px;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
+body{font:400 16px/1.65 var(--font-body);background:var(--color-bg);color:var(--color-fg);overflow-x:hidden;-webkit-user-select:none;user-select:none}
+img{display:block;max-width:100%;-webkit-user-drag:none}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3{font-family:var(--font-head);font-weight:700;line-height:1.08;text-wrap:balance}
+:focus-visible{outline:3px solid var(--color-ring);outline-offset:3px;border-radius:8px}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.icon{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--color-gold)}
+.kicker::before{content:"";width:28px;height:1.5px;background:currentColor}
+.sec{padding:var(--space-6) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:var(--space-3);margin-bottom:var(--space-5);flex-wrap:wrap}
+.sec-head h2{font-size:clamp(34px,5vw,58px);margin-top:12px}
+.sec-head p{color:var(--color-muted);max-width:420px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;font-weight:700;font-size:16px;
+  transition:transform .2s var(--ease),background-color .2s,border-color .2s,color .2s;cursor:pointer}
+.btn-primary{background:var(--color-primary);color:var(--color-on-primary);box-shadow:0 14px 30px -14px rgba(220,38,38,.8)}
+.btn-primary:hover{background:var(--color-primary-hover);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(246,235,221,.35);color:var(--color-fg)}
+.btn-ghost:hover{border-color:var(--color-gold);color:var(--color-gold)}
+.btn:active{transform:scale(.97)}
+
+/* ===== HEADER ===== */
+.header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background-color .3s,border-color .3s;border-bottom:1px solid transparent}
+.header.scrolled{background:rgba(21,16,12,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--color-border)}
+.header .container{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:var(--font-head);font-size:28px;letter-spacing:.02em}
+.logo small{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--color-gold);margin-top:4px;font-weight:700}
+.nav{display:flex;gap:4px}
+.nav a{padding:10px 16px;border-radius:999px;font-weight:600;font-size:15px;color:var(--color-muted);transition:color .2s}
+.nav a:hover{color:var(--color-fg)}
+.header-cta{min-height:46px;padding:0 20px;font-size:15px}
+@media(max-width:900px){.nav,.header-cta{display:none}.header .container{height:64px}}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:120px 0 var(--space-6);overflow:hidden;
+  background:radial-gradient(120% 80% at 80% 10%,#5A2410 0,#2A1710 45%,var(--color-bg) 75%)}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.04)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,16,12,.55) 0%,rgba(21,16,12,.35) 35%,rgba(21,16,12,.92) 82%,var(--color-bg) 100%)}
+.embers{position:absolute;inset:0;z-index:1;pointer-events:none}
+.embers i{position:absolute;bottom:-10px;width:4px;height:4px;border-radius:50%;background:var(--color-ember);box-shadow:0 0 10px 2px rgba(249,115,22,.8);opacity:0;animation:rise 7s linear infinite}
+@keyframes rise{0%{transform:translate(0,0);opacity:0}10%{opacity:.9}100%{transform:translate(40px,-80vh);opacity:0}}
+.hero .container{position:relative;z-index:2}
+.hero h1{font-size:clamp(46px,8vw,104px);max-width:900px;margin:18px 0 20px}
+.hero h1 span{color:var(--color-gold)}
+.hero-lead{font-size:clamp(17px,1.7vw,20px);color:var(--color-muted);max-width:560px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:var(--space-4)}
+.hero-rating{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px;color:var(--color-fg)}
+.stars{display:flex;gap:2px;color:var(--color-gold)}
+.stars .icon{width:16px;height:16px;fill:currentColor;stroke:none}
+@media(max-width:480px){.hero .actions .btn{flex:1 1 100%}.hero{min-height:92svh}}
+
+/* ===== INFO ===== */
+.info{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--color-border);border-radius:var(--r-lg);background:var(--color-bg-2);margin-top:calc(var(--space-5) * -1);position:relative;z-index:3}
+.info-item{padding:24px;display:flex;gap:14px}
+.info-item+.info-item{border-left:1px solid var(--color-border)}
+.info-item .icon{color:var(--color-gold);margin-top:3px}
+.info-item small{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-muted);font-weight:700}
+.info-item b{font-size:17px;white-space:nowrap}
+@media(max-width:900px){.info{grid-template-columns:1fr 1fr;margin-top:0}.info-item:nth-child(3){border-left:0}.info-item:nth-child(n+3){border-top:1px solid var(--color-border)}}
+@media(max-width:520px){.info-item{padding:18px 16px}.info-item .icon{display:none}.info-item b{font-size:15px}}
+
+/* ===== GRILL / MENU ===== */
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dish{background:var(--color-card);border:1px solid var(--color-border);border-radius:var(--r-md);padding:26px;display:flex;flex-direction:column;gap:10px;transition:transform .3s var(--ease),border-color .3s}
+.dish:hover{transform:translateY(-4px);border-color:rgba(224,165,38,.5)}
+.dish .ic{width:50px;height:50px;border-radius:14px;background:rgba(220,38,38,.14);color:#F87171;display:grid;place-items:center;margin-bottom:6px}
+.dish .ic .icon{width:24px;height:24px}
+.dish h3{font-size:24px}
+.dish p{color:var(--color-muted);font-size:15px}
+.dish .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px}
+.dish .tags span{font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;border:1px solid var(--color-border);color:var(--color-gold)}
+.dish-feature{grid-column:span 2;grid-row:span 2;background:linear-gradient(160deg,#3A1A10,#1E1712 70%);position:relative;overflow:hidden;justify-content:flex-end;min-height:360px}
+.dish-feature::before{content:"";position:absolute;width:420px;height:420px;right:-120px;top:-140px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,.35),transparent 65%)}
+.dish-feature > *{position:relative}
+.dish-feature h3{font-size:clamp(34px,4vw,52px)}
+.dish-feature p{font-size:17px;max-width:460px}
+.menu-note{margin-top:var(--space-3);display:flex;gap:10px;align-items:center;color:var(--color-muted);font-size:15px}
+.menu-note .icon{color:var(--color-gold)}
+@media(max-width:1000px){.menu-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.menu-grid{grid-template-columns:1fr}.dish-feature{grid-column:auto;grid-row:auto;min-height:300px}}
+
+/* ===== TERRACE ===== */
+.terrace{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5);align-items:center}
+.terrace-pic{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5;background:linear-gradient(160deg,#2F4A2A,#15100C)}
+.terrace-pic img{width:100%;height:100%;object-fit:cover}
+.terrace-pic .badge{position:absolute;left:20px;bottom:20px;background:rgba(21,16,12,.8);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--color-border);
+  border-radius:var(--r-md);padding:14px 18px;display:flex;gap:12px;align-items:center;font-weight:700}
+.terrace-pic .badge .icon{color:var(--color-gold)}
+.terrace h2{font-size:clamp(34px,5vw,58px);margin:12px 0 18px}
+.terrace > div > p{color:var(--color-muted);font-size:17px;max-width:480px}
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:var(--space-4)}
+.perk{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:var(--r-sm);background:var(--color-bg-2);border:1px solid var(--color-border)}
+.perk .icon{color:var(--color-gold);margin-top:2px}
+.perk b{display:block;font-size:15px}
+.perk span{font-size:14px;color:var(--color-muted)}
+@media(max-width:900px){.terrace{grid-template-columns:1fr}.terrace-pic{aspect-ratio:4/3}}
+@media(max-width:480px){.perks{grid-template-columns:1fr}}
+
+/* ===== REVIEWS ===== */
+.reviews{display:grid;grid-template-columns:300px 1fr;gap:16px}
+.score{border-radius:var(--r-lg);padding:30px;background:var(--color-gold);color:var(--color-on-gold);display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.score .num{font-family:var(--font-head);font-size:92px;line-height:.9}
+.score .stars{color:var(--color-on-gold)}
+.score .stars .icon{width:22px;height:22px}
+.score p{font-weight:600}
+.score a{display:inline-flex;align-items:center;gap:8px;font-weight:800;min-height:44px}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rev{background:var(--color-card);border:1px solid var(--color-border);border-radius:var(--r-md);padding:24px;display:flex;flex-direction:column;gap:12px}
+.rev .q{font-family:var(--font-head);font-size:52px;line-height:.5;height:22px;color:var(--color-primary)}
+.rev p{flex:1}
+.rev small{color:var(--color-gold);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+@media(max-width:1000px){.reviews{grid-template-columns:1fr}}
+@media(max-width:800px){.rev-grid{grid-template-columns:1fr}}
+
+/* ===== VISIT ===== */
+.visit{display:grid;grid-template-columns:.85fr 1.15fr;gap:16px}
+.visit-card{background:var(--color-card);border:1px solid var(--color-border);border-radius:var(--r-lg);padding:var(--space-4);display:flex;flex-direction:column;gap:22px}
+.row{display:flex;gap:14px}
+.row .ic{width:44px;height:44px;border-radius:12px;background:rgba(224,165,38,.12);color:var(--color-gold);display:grid;place-items:center;flex:none}
+.row small{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-muted);font-weight:700}
+.row b{font-size:17px}
+.row .sub{display:block;font-size:14px;color:var(--color-muted)}
+.visit-card .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto}
+.visit-card .actions .btn{flex:1 1 190px}
+.map{border-radius:var(--r-lg);overflow:hidden;min-height:480px;background:var(--color-bg-2);border:1px solid var(--color-border)}
+.map iframe{width:100%;height:100%;min-height:480px;border:0;display:block}
+@media(max-width:900px){.visit{grid-template-columns:1fr}.visit-card{padding:var(--space-3)}.map,.map iframe{min-height:320px}}
+
+/* ===== CTA BAND ===== */
+.cta{border-radius:var(--r-lg);padding:var(--space-5);background:linear-gradient(120deg,#7F1D1D,#3A1A10 60%,#251C16);display:flex;justify-content:space-between;align-items:center;gap:var(--space-3);flex-wrap:wrap;position:relative;overflow:hidden}
+.cta h2{font-size:clamp(28px,4vw,44px);max-width:620px}
+.cta p{color:var(--color-muted);margin-top:8px}
+@media(max-width:600px){.cta{padding:var(--space-4) 20px}.cta .btn{flex:1 1 100%}}
+
+/* ===== FOOTER ===== */
+.footer{border-top:1px solid var(--color-border);padding:var(--space-5) 0;color:var(--color-muted);font-size:14px}
+.footer .container{display:flex;justify-content:space-between;gap:var(--space-3);flex-wrap:wrap;align-items:center}
+
+/* ===== MOBILE BAR ===== */
+.mbar{display:none}
+@media(max-width:900px){
+  .mbar{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(21,16,12,.94);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--color-border);padding:8px 12px calc(8px + env(safe-area-inset-bottom))}
+  .mbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:56px;border-radius:14px;font-size:13px;font-weight:700;color:var(--color-muted)}
+  .mbar a.main{background:var(--color-primary);color:#fff}
+  body{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+}
+
+/* ===== ДЕМО: аккуратная метка ===== */
+#demo-tag{position:fixed;left:16px;bottom:16px;z-index:70;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;
+  background:rgba(246,235,221,.92);color:#1A120B;font:700 12px/1.2 var(--font-body);box-shadow:0 10px 24px -10px rgba(0,0,0,.6)}
+#demo-tag i{width:8px;height:8px;border-radius:50%;background:var(--color-primary)}
+#demo-tag a{text-decoration:underline;text-underline-offset:2px}
+@media(max-width:900px){#demo-tag{bottom:calc(84px + env(safe-area-inset-bottom));left:12px}}
+#demo-lock{position:fixed;inset:0;z-index:10000;background:var(--color-bg);display:none;align-items:center;justify-content:center;text-align:center;padding:24px}
+#demo-lock h2{font-size:34px;margin-bottom:12px}
+
+/* ===== MOTION ===== */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.embers{display:none}*{transition-duration:0s!important}}
+</style>
+</head>
+<body oncontextmenu="return false" oncopy="return false" ondragstart="return false">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3.3.4 1.2 1.4 2.3 2.5 2.8z"/></symbol>
+  <symbol id="i-skewer" viewBox="0 0 24 24"><path d="M3 21 21 3"/><rect x="5.5" y="11.5" width="5" height="5" rx="1.5" transform="rotate(-45 8 14)"/><rect x="10.5" y="6.5" width="5" height="5" rx="1.5" transform="rotate(-45 13 9)"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.1-6"/></symbol>
+  <symbol id="i-salad" viewBox="0 0 24 24"><path d="M7 21h10M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9z"/><path d="M11.4 7.6a3 3 0 0 1 5.2 1.4M8 12a4 4 0 0 1 4-4M6.4 8.6A3 3 0 0 1 10 6"/></symbol>
+  <symbol id="i-cake" viewBox="0 0 24 24"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1M2 21h20M7 8v3M12 8v3M17 8v3"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M5 8h14l-1.5 13h-11z"/><path d="M4 5h16v3H4z"/></symbol>
+  <symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 22v-7M9 15h6M17 8a5 5 0 1 0-10 0 4 4 0 0 0-1 7.9h12A4 4 0 0 0 17 8z"/></symbol>
+  <symbol id="i-blanket" viewBox="0 0 24 24"><path d="M4 5h16v11H4z"/><path d="M4 9h16M4 13h16M8 16v3M12 16v3M16 16v3"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></symbol>
+  <symbol id="i-metro" viewBox="0 0 24 24"><path d="M4 19 8 5l4 8 4-8 4 14"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<header class="header" id="header">
+  <div class="container">
+    <a href="#top" class="logo" aria-label="Бульвар — наверх"><b>Бульвар</b><small>мангал · веранда</small></a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#grill">Мангал</a><a href="#terrace">Веранда</a><a href="#reviews">Отзывы</a><a href="#visit">Контакты</a>
+    </nav>
+    <a href="tel:+79050231167" class="btn btn-primary header-cta"><svg class="icon"><use href="#i-phone"/></svg>Забронировать стол</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-bg"><img src="https://avatars.mds.yandex.net/get-altay/15270672/2a000001979dfea7ee64b39fac9182f296c7/XXL_height" alt="" width="1600" height="1000" fetchpriority="high" onerror="this.remove()"></div>
+    <div class="embers" aria-hidden="true"></div>
+    <div class="container reveal">
+      <span class="hero-rating"><span class="stars" aria-hidden="true"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>4,4 · более 700 оценок на Яндекс Картах</span>
+      <h1>Шашлык на углях <span>у&nbsp;самого бульвара</span></h1>
+      <p class="hero-lead">Сочное мясо с мангала, хан-кебаб, долма и летняя веранда среди деревьев. Тёплое место, чтобы посидеть после прогулки, — в двух шагах от метро «Козья слобода».</p>
+      <div class="actions">
+        <a href="tel:+79050231167" class="btn btn-primary"><svg class="icon"><use href="#i-phone"/></svg>Забронировать стол</a>
+        <a href="#grill" class="btn btn-ghost"><svg class="icon"><use href="#i-menu"/></svg>Что у нас готовят</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" aria-label="Коротко">
+    <div class="info reveal">
+      <div class="info-item"><svg class="icon"><use href="#i-clock"/></svg><div><small>Сегодня</small><b>до 00:00</b></div></div>
+      <div class="info-item"><svg class="icon"><use href="#i-pin"/></svg><div><small>Адрес</small><b>Декабристов, 2/1</b></div></div>
+      <div class="info-item"><svg class="icon"><use href="#i-phone"/></svg><div><small>Телефон</small><b><a href="tel:+79050231167">+7 905 023-11-67</a></b></div></div>
+      <div class="info-item"><svg class="icon"><use href="#i-wallet"/></svg><div><small>Средний чек</small><b>500–800 ₽</b></div></div>
+    </div>
+  </section>
+
+  <section class="sec" id="grill">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div><span class="kicker">С мангала</span><h2>За чем к нам приходят</h2></div>
+        <p>Жарим на настоящих углях. Это блюда, которые гости хвалят чаще всего.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="dish dish-feature reveal">
+          <span class="ic"><svg class="icon"><use href="#i-flame"/></svg></span>
+          <h3>Шашлык на углях</h3>
+          <p>Баранина, индейка, свинина и шея. Мягкое, сочное мясо, которое пахнет дымом.</p>
+          <div class="tags"><span>Баранина</span><span>Индейка</span><span>Свинина</span><span>Шея</span></div>
+        </article>
+        <article class="dish reveal"><span class="ic"><svg class="icon"><use href="#i-skewer"/></svg></span><h3>Хан-кебаб</h3><p>Фирменное блюдо, которое заказывают снова и снова.</p></article>
+        <article class="dish reveal"><span class="ic"><svg class="icon"><use href="#i-skewer"/></svg></span><h3>Люля-кебаб</h3><p>Рубленое мясо со специями, прямо с огня.</p></article>
+        <article class="dish reveal"><span class="ic"><svg class="icon"><use href="#i-leaf"/></svg></span><h3>Долма</h3><p>В виноградных листьях, одно из самых любимых блюд гостей.</p></article>
+        <article class="dish reveal"><span class="ic"><svg class="icon"><use href="#i-salad"/></svg></span><h3>Салаты</h3><p>Греческий и свежие овощи к мясу.</p></article>
+        <article class="dish reveal"><span class="ic"><svg class="icon"><use href="#i-cake"/></svg></span><h3>Десерты и компот</h3><p>Чизкейк к чаю и домашний компот.</p></article>
+      </div>
+      <p class="menu-note reveal"><svg class="icon"><use href="#i-info"/></svg>Средний чек 500–800 ₽. Полное меню с ценами — у официанта или по телефону.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="terrace" style="padding-top:0">
+    <div class="container terrace">
+      <div class="terrace-pic reveal">
+        <img src="https://avatars.mds.yandex.net/get-altay/1784631/2a0000016b8c63c43254a220a31d4c2c7682/XXL_height" alt="Летняя веранда кафе «Бульвар»" width="800" height="1000" loading="lazy" onerror="this.remove()">
+        <div class="badge"><svg class="icon"><use href="#i-leaf"/></svg>Веранда среди деревьев</div>
+      </div>
+      <div class="reveal">
+        <span class="kicker">Атмосфера</span>
+        <h2>Летняя веранда с видом на парк</h2>
+        <p>Деревья, зелень и вид на бульвар. Летом здесь ужинают компаниями, а в прохладные вечера выдают пледы.</p>
+        <div class="perks">
+          <div class="perk"><svg class="icon"><use href="#i-tree"/></svg><div><b>Зелень вокруг</b><span>Веранда прямо у бульвара</span></div></div>
+          <div class="perk"><svg class="icon"><use href="#i-eye"/></svg><div><b>Красивый вид</b><span>На парк и аллею</span></div></div>
+          <div class="perk"><svg class="icon"><use href="#i-blanket"/></svg><div><b>Пледы</b><span>Тепло и в прохладный вечер</span></div></div>
+          <div class="perk"><svg class="icon"><use href="#i-users"/></svg><div><b>Для компаний</b><span>С семьёй и друзьями</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="reviews" style="padding-top:0">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div><span class="kicker">Отзывы</span><h2>Что говорят гости</h2></div>
+        <p>Коротко из сотен отзывов на Яндекс Картах.</p>
+      </div>
+      <div class="reviews">
+        <div class="score reveal">
+          <div><div class="num">4,4</div>
+            <div class="stars" aria-label="Оценка 4,4 из 5"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon" style="opacity:.35"><use href="#i-star"/></svg></div></div>
+          <p>701 оценка и 324 отзыва на Яндекс Картах</p>
+          <a href="https://yandex.ru/maps/org/bulvar/1678014244/reviews/" target="_blank" rel="noopener">Читать отзывы <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="rev-grid">
+          <figure class="rev reveal"><span class="q" aria-hidden="true">“</span><p>Шашлык мягкий и сочный, отдельно хвалят хан-кебаб, люля и печень.</p><small>Про мангал</small></figure>
+          <figure class="rev reveal"><span class="q" aria-hidden="true">“</span><p>Уютная веранда в зелени: хорошо отдохнуть после прогулки по городу.</p><small>Про атмосферу</small></figure>
+          <figure class="rev reveal"><span class="q" aria-hidden="true">“</span><p>Порции большие, а цены приятные, особенно для такого места.</p><small>Про цены</small></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" style="padding-top:0">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div><span class="kicker">Контакты</span><h2>Как нас найти</h2></div>
+        <p>Ново-Савиновский район, рядом с метро «Козья слобода».</p>
+      </div>
+      <div class="visit">
+        <div class="visit-card reveal">
+          <div class="row"><span class="ic"><svg class="icon"><use href="#i-pin"/></svg></span><div><small>Адрес</small><b>Казань, ул. Декабристов, 2/1</b></div></div>
+          <div class="row"><span class="ic"><svg class="icon"><use href="#i-clock"/></svg></span><div><small>Режим работы</small><b>Ежедневно до 00:00</b></div></div>
+          <div class="row"><span class="ic"><svg class="icon"><use href="#i-phone"/></svg></span><div><small>Бронь и заказ</small><b><a href="tel:+79050231167">+7 (905) 023-11-67</a></b></div></div>
+          <div class="row"><span class="ic"><svg class="icon"><use href="#i-metro"/></svg></span><div><small>Как добраться</small><b>Метро «Козья слобода» — 320 м</b><span class="sub">Ост. «Энергетический университет» — 230 м</span></div></div>
+          <div class="row"><span class="ic"><svg class="icon"><use href="#i-bike"/></svg></span><div><small>Доставка</small><b>Через Яндекс Еду</b><span class="sub">Или закажите с собой по телефону</span></div></div>
+          <div class="actions">
+            <a href="https://yandex.ru/maps/?rtext=~55.813859,49.102915" target="_blank" rel="noopener" class="btn btn-primary"><svg class="icon"><use href="#i-route"/></svg>Маршрут</a>
+            <a href="tel:+79050231167" class="btn btn-ghost"><svg class="icon"><use href="#i-phone"/></svg>Позвонить</a>
+          </div>
+        </div>
+        <div class="map reveal">
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=49.102915%2C55.813859&z=16&oid=1678014244" loading="lazy" title="«Бульвар» на карте"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" style="padding-bottom:var(--space-6)">
+    <div class="cta reveal">
+      <div><h2>Вечер на веранде? Забронируйте стол заранее</h2><p>Особенно в выходные: вечером у нас бывает людно.</p></div>
+      <a href="tel:+79050231167" class="btn btn-primary"><svg class="icon"><use href="#i-phone"/></svg>Позвонить и забронировать</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div><b style="font-family:var(--font-head);font-size:22px;color:var(--color-fg)">Бульвар</b><br>Казань, ул. Декабристов, 2/1</div>
+    <div id="dev-footer">Сайт: Артём · <a href="https://t.me/q0crx" target="_blank" rel="noopener" style="text-decoration:underline">@q0crx</a></div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Быстрые действия">
+  <a href="#grill"><svg class="icon"><use href="#i-menu"/></svg>Блюда</a>
+  <a href="tel:+79050231167" class="main"><svg class="icon"><use href="#i-phone"/></svg>Забронировать</a>
+  <a href="https://yandex.ru/maps/?rtext=~55.813859,49.102915" target="_blank" rel="noopener"><svg class="icon"><use href="#i-route"/></svg>Маршрут</a>
+</nav>
+
+<!-- Демо-метка: маленькая и вежливая -->
+<div id="demo-tag"><i></i>Демо-версия · <a href="https://t.me/q0crx" target="_blank" rel="noopener">Артём</a></div>
+<div id="demo-lock"><div><h2>Демо-версия закрыта</h2>Чтобы получить сайт, напишите разработчику: <a href="https://t.me/q0crx" style="text-decoration:underline">@q0crx</a></div></div>
+
+<script>
+/* ===== НАСТРОЙКИ ДЕМО ===== */
+const DEMO_UNTIL   = "2026-11-08";   // после этой даты вместо сайта заглушка
+const ALLOWED_HOST = "";             // напр. "q0crx.github.io" — на чужом хостинге сайт не откроется
+
+/* искры над мангалом */
+const em=document.querySelector(".embers");
+for(let i=0;i<18;i++){const s=document.createElement("i");s.style.left=(Math.random()*100)+"%";s.style.animationDelay=(Math.random()*7)+"s";s.style.animationDuration=(5+Math.random()*4)+"s";em.appendChild(s)}
+
+/* хедер + появление */
+const header=document.getElementById("header");
+const onScroll=()=>header.classList.toggle("scrolled",scrollY>20);onScroll();
+addEventListener("scroll",onScroll,{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>{const g=el.parentElement;if(g.matches(".menu-grid,.rev-grid"))el.style.transitionDelay=([...g.children].indexOf(el)*70)+"ms";io.observe(el)});
+
+/* ===== ЗАЩИТА ДЕМО (незаметная) ===== */
+(function(){
+  const lock=()=>{document.getElementById("demo-lock").style.display="flex";document.body.style.overflow="hidden"};
+  if(new Date()>new Date(DEMO_UNTIL+"T23:59:59"))lock();
+  if(ALLOWED_HOST&&location.hostname&&location.hostname!==ALLOWED_HOST)lock();
+  const tag=document.getElementById("demo-tag").outerHTML;
+  new MutationObserver(()=>{
+    const t=document.getElementById("demo-tag");
+    if(!t||getComputedStyle(t).display==="none"||getComputedStyle(t).visibility==="hidden"||+getComputedStyle(t).opacity<.5){t&&t.remove();document.body.insertAdjacentHTML("beforeend",tag)}
+  }).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:["style","class"]});
+  document.addEventListener("keydown",e=>{const k=e.key.toLowerCase(),m=e.ctrlKey||e.metaKey;
+    if(e.key==="F12"||(m&&["s","u","p"].includes(k))||(m&&e.shiftKey&&["i","j","c"].includes(k)))e.preventDefault()});
+})();
+</script>
+</body>
+</html>
